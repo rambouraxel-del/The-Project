@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0907">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Atlas">
+  <title>Atlas des Ambitions</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div id="stage">
+      <canvas id="gl"></canvas>
+      <canvas id="decor"></canvas>
+      <div id="slots"></div>
+      <div id="tokens"></div>
+    </div>
+    <div class="vignette"></div>
+    <header id="topbar">
+      <div class="logo"><span class="logo-mark"></span><span class="logo-text">Atlas<small>des Ambitions</small></span></div>
+      <div class="top-actions">
+        <button id="btn-home" class="round" aria-label="Recentrer la carte" title="Recentrer"></button>
+        <button id="btn-menu" class="round" aria-label="Menu"></button>
+      </div>
+    </header>
+    <button id="relic" aria-label="Reliquaire : objectifs accomplis">
+      <span class="cap top"></span>
+      <span class="glass"><span class="liquid"></span><span class="stack"></span><span class="shine"></span></span>
+      <span class="cap bottom"></span>
+      <span class="count">0</span>
+    </button>
+    <button id="fab" aria-label="Nouvel objectif"><span class="fab-plus"></span><span class="fab-text">Nouvel objectif</span></button>
+    <div id="dial-layer"></div>
+    <div id="sheet"></div>
+    <div id="modal-root"></div>
+    <div id="toasts"></div>
+    <div id="loader"><div class="loader-inner"><div class="loader-mark"></div><h1>Atlas des Ambitions</h1><p id="loader-msg">Gravure du monde…</p><div class="bar"><i id="loader-bar"></i></div></div></div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
