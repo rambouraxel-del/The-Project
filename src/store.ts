@@ -93,7 +93,7 @@ export class Store {
   }
   reset() {
     const w = this.world;
-    this.lobes = [{ x: w.hub.x, y: w.hub.y, r: 820 }];
+    this.lobes = [{ x: w.hub.x, y: w.hub.y, r: 1000 }];
     this.goals = sampleGoals();
     // placement des objectifs d'exemple sur les emplacements du premier territoire
     const taken = new Set<number>();
@@ -103,7 +103,7 @@ export class Store {
       if (s != null) taken.add(s);
     }
     const hub = w.hub;
-    this.cam = { x: hub.x, y: hub.y, zoom: 0.5 };
+    this.cam = { x: hub.x, y: hub.y, zoom: 0 }; // 0 = zoom initial calculé selon l’écran
     this.emit();
   }
 

@@ -29,3 +29,16 @@ Déploiement HTTPS automatique : le workflow `.github/workflows/pages.yml` publi
 - Les tâches (sans enfant) se valident individuellement ; un parent ne se valide que lorsqu'il est *prêt*.
 - Un objectif principal accompli quitte la carte pour le reliquaire ; ses sous-objectifs restent dans son arborescence. Archives modifiables ; **Réactiver** le replace sur la carte (le territoire s'étend si besoin).
 - Sauvegarde automatique (progression, positions, territoire) dans le navigateur.
+
+## Captures
+
+`docs/screenshots/` : `desktop_*` (1440×900) et `mobile_*` (iPhone 390×844 @2x) — carte, cadran à un cercle, sous-niveau, deux anneaux, archives.
+
+## Limites connues de la V1
+
+- **Visuels générés par IA** (textures de terrain, sprites, jetons). Les jetons sont fournis en 3 matières × 10 gravures ; il n'y a pas encore d'illustration unique générée par objectif.
+- **Monde fixe** (graine 1337, ~70 emplacements, 6 400 × 6 400 unités). Quand il est entièrement exploré, il faut agrandir la génération (le code est déjà paramétrable par graine/taille).
+- **Rendu 2D éclairé** (vue satellite, relief ombré, ombres des décors) : pas encore de vraie 3D. Les données (hauteur, normales, masques, décors) sont isolées du rendu pour permettre un moteur Three.js/WebGPU plus tard.
+- **Pas de synchronisation multi-appareils** : la sauvegarde est locale au navigateur (`localStorage`). Export/import JSON à ajouter.
+- Les performances ont été validées en rendu logiciel (SwiftShader) ; la résolution s'adapte automatiquement si l'appareil est lent. À confirmer sur un iPhone réel.
+- Pas de réorganisation manuelle de l'ordre des sous-objectifs ni de dates d'échéance (hors périmètre V1).

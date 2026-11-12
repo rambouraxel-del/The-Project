@@ -79,7 +79,7 @@ export class WorldRenderer {
   readonly slotOrder: Decor[] = [];
 
   constructor(private canvas: HTMLCanvasElement, private decorCanvas: HTMLCanvasElement, private world: World, private assets: Assets) {
-    const gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: true })!;
+    const gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'high-performance', preserveDrawingBuffer: false })!;
     if (!gl) throw new Error('WebGL indisponible');
     this.gl = gl;
     this.ctx = decorCanvas.getContext('2d')!;

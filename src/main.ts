@@ -436,6 +436,12 @@ async function boot() {
   setP(1, 'Prêt');
   await wait(250);
   $('loader').classList.add('hide');
+  try {
+    if (!localStorage.getItem('atlas-des-ambitions:hint')) {
+      localStorage.setItem('atlas-des-ambitions:hint', '1');
+      setTimeout(() => toast('Touchez un jeton pour l\u2019ouvrir · appui long pour le déplacer'), 1200);
+    }
+  } catch { /* stockage indisponible */ }
   document.addEventListener('contextmenu', e => e.preventDefault());
   void (null as unknown as Lobe);
 }

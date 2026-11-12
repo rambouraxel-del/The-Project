@@ -267,6 +267,6 @@ body.dial-open #fab, body.dial-open #relic { opacity: 0; pointer-events: none; t
   .logo-text { font-size: 15px; } .logo-text small { font-size: 9px; }
 }
 
-.dial-item .token .label { max-width: 88px; margin-top: 1px; }
+.dial-item .token .label { max-width: 108px; margin-top: 1px; }
 .dial-item .token .label span { font-size: 12px; padding: 1px 6px 2px; }
 @media (max-width: 560px) { .sheet-card .hint { display: none; } .sheet-note { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .sheet-title { font-size: 20px; } }

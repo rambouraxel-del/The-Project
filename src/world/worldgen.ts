@@ -343,7 +343,7 @@ export function generateWorld(seed = 1337): World {
   }
   for (const s of slots) {
     const g = roadCv.g.createRadialGradient(s.x / cell, s.y / cell, 0, s.x / cell, s.y / cell, 120 / cell);
-    g.addColorStop(0, 'rgba(255,255,255,0.55)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+    g.addColorStop(0, 'rgba(255,255,255,0.3)'); g.addColorStop(1, 'rgba(255,255,255,0)');
     roadCv.g.fillStyle = g;
     roadCv.g.beginPath(); roadCv.g.arc(s.x / cell, s.y / cell, 120 / cell, 0, 6.3); roadCv.g.fill();
   }

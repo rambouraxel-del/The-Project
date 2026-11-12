@@ -31,7 +31,7 @@ export function computeLayout(n: number, availR: number): Layout {
   // 1) petit nombre d'éléments : un seul cercle, avec les noms lisibles
   if (n <= 8) {
     for (let ts = start; ts >= 50; ts -= 2) {
-      const r = Math.max(cs / 2 + ts * 0.66 + 24, (n * 112) / (2 * Math.PI));
+      const r = Math.max(cs / 2 + ts / 2 + 46, (n * 112) / (2 * Math.PI));
       if (r + ts * 0.75 + 26 <= availR) return { ts, cs, rings: [{ r, count: n }], labels: true, outer: r };
     }
   }
